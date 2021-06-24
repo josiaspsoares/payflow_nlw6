@@ -72,7 +72,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             GestureDetector(
-              onDoubleTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, "/barcode-scanner");
+              },
               child: Container(
                 width: 56,
                 height: 56,
@@ -81,7 +83,9 @@ class _HomePageState extends State<HomePage> {
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/barcode-scanner");
+                  },
                   icon: const Icon(
                     Icons.add_box_outlined,
                     color: AppColors.background,
@@ -91,7 +95,7 @@ class _HomePageState extends State<HomePage> {
             ),
             IconButton(
               onPressed: () {
-                 setState(() {
+                setState(() {
                   controller.setPage(1);
                 });
               },
